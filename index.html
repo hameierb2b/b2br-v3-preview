@@ -452,9 +452,6 @@ html.is-locked { position: relative; overflow: hidden; height: 100%; }
 .pd-srow .f { font-family: var(--font-display); font-weight: 500; font-size: calc(38 * var(--U)); line-height: 0.72; letter-spacing: calc(-3.04 * var(--U)); }
 .pd-srule { height: 1px; background: var(--foreground-muted); margin: var(--stats-rule-top, calc(24 * var(--U))) 0 var(--stats-rule-bottom, calc(23 * var(--U))); transform-origin: left; transform: scaleX(var(--rs, 0)); }
 
-  background: repeating-linear-gradient(to right, var(--foreground-on-dark-muted) 0 0.4861cqw, transparent 0.4861cqw 0.7951cqw); }
-@media (max-width: 639px) {
-}
 
 /* ══ FOOTER ════════════════════════════════════ */
 
@@ -732,13 +729,9 @@ html.is-locked { position: relative; overflow: hidden; height: 100%; }
 .pr-hero { padding: max(6.9444cqw, 56px) var(--g) max(3.3333cqw, 32px); display: flex; flex-direction: column; gap: max(1.6667cqw, 18px); }
 .pr-eyebrow { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0; }
 .pr-h { font-size: max(6.9444cqw, 44px); color: var(--foreground); }
-.pr-h .dot, .cmp-h .dot, .vip-h .dot { color: var(--accent); }
+.pr-h .dot, .cmp-h .dot { color: var(--accent); }
 .pr-hero-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem 3rem; flex-wrap: wrap; margin-top: max(1.1111cqw, 8px); }
 .pr-intro { max-width: 36rem; margin: 0; font-size: max(1.1111cqw, 16px); line-height: 1.45; color: rgb(11 8 28 / 0.7); }
-.pr-switch { display: inline-flex; border: 1px solid var(--foreground); }
-.pr-switch button { background: none; border: 0; padding: 0.85rem 1.25rem; font: inherit; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; color: var(--foreground); cursor: pointer; transition: background-color 200ms, color 200ms; }
-.pr-switch button[aria-selected="true"] { background: var(--surface-black); color: #fff; }
-.pr-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .pr-plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 var(--g); border: 1px solid rgb(11 8 28 / 0.14); }
 .pl { display: flex; flex-direction: column; gap: 1rem; padding: max(2.2222cqw, 24px); background: #fff; min-width: 0; }
 .pl + .pl { border-left: 1px solid rgb(11 8 28 / 0.14); }
@@ -766,13 +759,13 @@ html.is-locked { position: relative; overflow: hidden; height: 100%; }
 .pl-lead { margin: 0.25rem 0 0; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
 .pl--pop .pl-lead { color: #A3AAFF; }
 .pl-feats { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.9375rem; line-height: 1.35; }
-.pl-feats li, .vip-area li { display: flex; gap: 0.6rem; align-items: flex-start; }
+.pl-feats li { display: flex; gap: 0.6rem; align-items: flex-start; }
 .ck { width: 1.15rem; height: 1.15rem; flex: none; color: var(--accent); margin-top: 0.05rem; }
 .pl--pop .ck { color: #A3AAFF; }
 .pr-note { margin: 1rem var(--g) 0; font-size: 0.8125rem; color: rgb(11 8 28 / 0.55); }
 .pr-note sup, .cmp sup { color: var(--accent); font-weight: 700; }
 .cmp-sec { padding: max(8.3333cqw, 72px) var(--g) max(6.9444cqw, 56px); }
-.cmp-h, .vip-h, .pq-h { font-size: max(3.8194cqw, 34px); color: var(--foreground); margin: 0 0 max(2.7778cqw, 28px); }
+.cmp-h, .pq-h { font-size: max(3.8194cqw, 34px); color: var(--foreground); margin: 0 0 max(2.7778cqw, 28px); }
 .cmp-wrap { overflow-x: auto; }
 .cmp { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
 .cmp th, .cmp td { padding: 0.85rem 1rem; border-bottom: 1px solid rgb(11 8 28 / 0.1); text-align: center; }
@@ -783,18 +776,6 @@ html.is-locked { position: relative; overflow: hidden; height: 100%; }
 .cmp-group th { text-align: left !important; padding-top: 2rem; font-family: var(--font-mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: none !important; }
 .cmp .is-yes .ck { margin: 0 auto; display: block; }
 .cmp .is-no { color: rgb(11 8 28 / 0.3); }
-.vip { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: max(4.4444cqw, 32px); padding: max(8.3333cqw, 72px) var(--g) max(6.9444cqw, 56px); }
-.vip-intro p { margin: 0; max-width: 34rem; line-height: 1.55; color: rgb(11 8 28 / 0.72); }
-.vip-areas { border-top: 1px solid var(--foreground); }
-.vip-area { border-bottom: 1px solid rgb(11 8 28 / 0.14); }
-.vip-area summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 0; font-family: var(--font-display); font-weight: 800; font-size: 1.125rem; text-transform: uppercase; letter-spacing: -0.01em; }
-.vip-area summary::-webkit-details-marker { display: none; }
-.vip-area summary i { position: relative; width: 14px; height: 14px; flex: none; }
-.vip-area summary i::before, .vip-area summary i::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--accent); transition: transform 200ms; }
-.vip-area summary i::after { transform: rotate(90deg); }
-.vip-area[open] summary i::after { transform: rotate(0); }
-.vip-area summary:hover { color: var(--accent); }
-.vip-area ul { list-style: none; margin: 0; padding: 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.9375rem; line-height: 1.45; color: rgb(11 8 28 / 0.78); }
 .pr-quotes { background: var(--surface-black); color: #fff; padding: max(8.3333cqw, 72px) var(--g); }
 .pr-quotes .pq-h { color: #7D86FF; }
 .pr-quotes .pq-h .dot { color: #fff; }
@@ -806,8 +787,7 @@ html.is-locked { position: relative; overflow: hidden; height: 100%; }
 @media (max-width: 1023px) {
   .pr-plans { grid-template-columns: 1fr; }
   .pl + .pl { border-left: 0; border-top: 1px solid rgb(11 8 28 / 0.14); }
-  .vip { grid-template-columns: 1fr; }
-}
+  }
 /* Phones: the comparison fits the screen instead of scrolling sideways (a wide scroller still widened the page). */
 @media (max-width: 639px) {
   .cmp { min-width: 0; table-layout: fixed; font-size: 0.8125rem; }
@@ -817,7 +797,21 @@ html.is-locked { position: relative; overflow: hidden; height: 100%; }
   .cmp thead th span { font-size: 0.625rem; }
   .cmp-group th { padding-left: 0; }
 }
-@media (max-width: 639px) { .pg .mast .rv-line .rv { flex-wrap: wrap; row-gap: 0; } .pr-h { font-size: 40px; } .pq-grid { grid-template-columns: 1fr; } .pr-switch { width: 100%; } .pr-switch button { flex: 1; padding: 0.85rem 0.5rem; } }
+@media (max-width: 639px) { .pg .mast .rv-line .rv { flex-wrap: wrap; row-gap: 0; } .pr-h { font-size: 40px; } .pq-grid { grid-template-columns: 1fr; } }
+/* Pricing: the four core offerings — a numbered strip in the hero, a labelled group in every plan card. */
+.pr-offers { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; border: 1px solid var(--foreground); counter-reset: off; }
+.pr-offers li { counter-increment: off; display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.1rem; font-family: var(--font-display); font-weight: 800; font-size: 0.9375rem; text-transform: uppercase; letter-spacing: -0.01em; }
+.pr-offers li + li { border-left: 1px solid rgb(11 8 28 / 0.2); }
+.pr-offers li::before { content: counter(off, decimal-leading-zero); font-family: var(--font-mono); font-weight: 500; font-size: 0.6875rem; color: var(--accent); }
+.pl-group { display: flex; flex-direction: column; gap: 0.55rem; padding-top: 1rem; border-top: 1px solid rgb(11 8 28 / 0.1); }
+.pl--pop .pl-group { border-top-color: rgb(255 255 255 / 0.14); }
+.pl-off { margin: 0; font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.pl--pop .pl-off { color: #A3AAFF; }
+.tbc { display: inline-block; font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.04em; padding: 0.2rem 0.4rem; line-height: 1; border: 1px dashed currentColor; color: rgb(11 8 28 / 0.5); flex: none; }
+.pl--pop .tbc { color: rgb(255 255 255 / 0.55); }
+.pl-feats li.is-tbc { color: rgb(11 8 28 / 0.5); align-items: center; }
+.pl--pop .pl-feats li.is-tbc { color: rgb(255 255 255 / 0.5); }
+@media (max-width: 639px) { .pr-offers { width: 100%; } .pr-offers li { flex: 1 1 50%; padding: 0.7rem 0.8rem; font-size: 0.8125rem; } .pr-offers li:nth-child(3) { border-left: 0; } .pr-offers li:nth-child(n+3) { border-top: 1px solid rgb(11 8 28 / 0.2); } }
 </style>
 </head>
 <body>
@@ -5630,29 +5624,9 @@ function initPaddock() {
 
 
 /* ════════════════════════════════════════════════════════════════
-   PRICING PAGE — the Self-serve / VIP switch and the headline reveals
+   PRICING PAGE — headline reveals
    ════════════════════════════════════════════════════════════════ */
 function initPricing() {
-  const tabs = [...document.querySelectorAll(".pr-switch [role=tab]")];
-  const select = (tab, focus = false) => {
-    for (const t of tabs) {
-      const on = t === tab;
-      t.setAttribute("aria-selected", on);
-      t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
-    }
-    if (focus) tab.focus();
-  };
-  tabs.forEach((tab, i) => {
-    tab.addEventListener("click", () => select(tab));
-    tab.addEventListener("keydown", (e) => {
-      const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
-      if (step) { e.preventDefault(); select(tabs[(i + step + tabs.length) % tabs.length], true); }
-    });
-  });
-  // #vip deep-links straight to the VIP plans.
-  if (location.hash === "#vip") select(tabs[1]);
-
   for (const h of document.querySelectorAll(".pg .mast[data-mast]")) {
     const mast = buildMast(h);
     onView(h, { mode: "once", play: () => mast.play(0) });
