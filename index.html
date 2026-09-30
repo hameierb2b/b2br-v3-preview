@@ -687,7 +687,9 @@ html.is-locked { position: relative; overflow: hidden; height: 100%; }
 #pd-stats .pd-srow { flex: 1 1 0; min-width: 0; }
 #pd-stats .pd-srow .l { white-space: nowrap; line-height: 1.05; }
 /* ── Main menu (mirrors b2brocket.ai): toggles with a chevron, panels under the header ── */
-.nav-toggle { display: inline-flex; align-items: center; gap: 0.4em; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; }
+/* A dropdown toggle is a <button>; it takes the same type as the plain .nav-link items (not `font: inherit`,
+   which pinned it to 16px while links scale with --type-label). */
+.nav-toggle { display: inline-flex; align-items: center; gap: 0.4em; background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-weight: inherit; letter-spacing: inherit; }
 .nav-toggle .nav-chev { width: 0.62em; height: 0.4em; transition: transform 200ms cubic-bezier(0.2,0,0,1); }
 .nav-toggle[aria-expanded="true"] { color: var(--accent); }
 .nav-toggle[aria-expanded="true"] .nav-chev { transform: rotate(180deg); }
@@ -3790,7 +3792,7 @@ function initHero() {
 
 /* ── the menu sheet ─────────────────────────────────────────── */
 /* ════════════════════════════════════════════════════════════════
-   Main menu — after b2brocket.ai's: Products · Solutions · Pricing · Resources
+   Main menu — after b2brocket.ai's: Products · Solutions · Resources · Pricing
    ════════════════════════════════════════════════════════════════ */
 const SITE = "https://b2brocket.ai";
 const MENU = [
@@ -3809,7 +3811,6 @@ const MENU = [
     ["Sales Development", "/sales-development", "AI-powered lead generation for SDR teams."],
     ["Enterprise", "/enterprise", "Enterprise outreach at scale with AI automation."],
   ] },
-  { label: "Pricing", href: "/pricing" },
   { label: "Resources", items: [
     ["About Us", "/about-us", "Who we are and what we’re building."],
     ["Blog", "/blog", "Insights on B2B sales and AI-driven marketing."],
@@ -3819,6 +3820,7 @@ const MENU = [
     ["Newsroom", "/newsroom", "Announcements, milestones and industry news."],
     ["House of Brands", "/house-of-brands", "The Blackpearl Group family of brands."],
   ] },
+  { label: "Pricing", href: "/pricing" },   // last, per the user
 ];
 const url = (h) => (h.startsWith("http") || h.startsWith("#") ? h : SITE + h);
 const CHEVRON = '<svg class="nav-chev" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
